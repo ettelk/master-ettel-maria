@@ -18,10 +18,10 @@ wp_head();
         <nav>
             <ul>
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/open-source">Open Source</a></li>
-                <li><a href="/customizable">Customizable</a></li>
-                <li><a href="/nueva">Nueva</a></li>
-                <li><a href="/basica">Web Básica</a></li>
+                <li><a href="/sobre-nosotros/">Sobre Nosotros</a></li>
+                <li><a href="/servicios-seo/">Servicios SEO</a></li>
+                <li><a href="/pricing/">Tarifas</a></li>
+                <li><a href="/casos-de-exito/">Casos de Éxito</a></li>
                 <li><a href="https://strapi.io/features/media-library" target="_blank">Media Library</a></li>
                 <li><span> Hoy es <?php echo date ("d/M/Y") ;?><span></li>
             </ul>

@@ -118,6 +118,31 @@ iframe {
     background-color: lightgrey;
     margin-top: 0px;
 }
+.flexcenter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.post-card a {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: flex-end;
+    background: lightblue;
+    justify-content: space-around;
+    padding: 0px;
+}
+
+.post-card a .post-name{
+    text-decoration: auto;
+    background: blue;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    min-height: 2em;
+}
 
 @media (max-width: 400px){
     nav{display: none;}
