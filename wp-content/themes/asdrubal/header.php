@@ -22,6 +22,7 @@ wp_head();
                 <li><a href="/servicios-seo/">Servicios SEO</a></li>
                 <li><a href="/pricing/">Tarifas</a></li>
                 <li><a href="/casos-de-exito/">Casos de Éxito</a></li>
+                <li><a href="/blog/">Blog</a></li>
                 <li><a href="https://strapi.io/features/media-library" target="_blank">Media Library</a></li>
                 <li><span> Hoy es <?php echo date ("d/M/Y") ;?><span></li>
             </ul>
