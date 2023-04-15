@@ -2,13 +2,13 @@
 <html <?php language_attributes (); ?>>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="UTF-8" />
+    
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" type='text/css' media='all'>
 <?php  /*    
 <link href="/css/fonts.css" rel="stylesheet">
 <link rel="stylesheet" href="/css/estilos.css"> -->
 */ 
+include 'components/metas-seo.php';
 wp_head();
 ?>
 </head>
