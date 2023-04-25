@@ -8,7 +8,11 @@ $url_sin_string = $protocol . '://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER["R
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta charset="UTF-8" />
 
-       <meta name="robots" content="">
+       <?php $metarobots_checked_values = get_field( 'metarobots', $term );
+       if ( $metarobots_checked_values ) : ?>
+           <meta name="robots" content="<?php the_field ('metarobots', $term); ?>">
+       <?php endif; ?>
+
        <?php the_field('custom_meta', $term);?>
      
        <title><?php the_field( 'title', $term); ?></title>
@@ -20,15 +24,19 @@ $url_sin_string = $protocol . '://' . $_SERVER['HTTP_HOST'] . strtok($_SERVER["R
         <!-- Open Graph / Facebook -->
     
         <meta property="og:title" content="<?php 
-        if (get_field('open_graph_title', $term)){
-            the_field( 'open_graph_title', $term );
-        } else{the_field( 'title', $term);}  
+        if (get_field('open_graph_title', $term))
+        {the_field( 'open_graph_title', $term );} 
+        else{the_field( 'title', $term);}  
         ?>">
         <meta property="og:type" content="website">
         <meta property="og:url" content="<?php if (get_field('canonical', $term)){the_field('canonical', $term);}
         else {echo $url_sin_string;}?>">
         <meta property="og:description" content="<?php the_field( 'open_graph_description', $term ); ?>">
-        <meta property="og:image" content="<?php the_field( 'open_graph_image' ); ?>">
+        <meta property="og:image" content="<?php 
+        if (get_field('open_graph_image', $term))
+        {the_field('open_graph_image', $term);} 
+        else{the_field('default_image', $term);}  
+        ?>">
         <meta property="og:image:secure_url" content="<?php the_field( 'open_graph_image' ); ?>">
         <meta property="og:image:alt" content="<?php the_field( 'title', $term); ?>">
 
