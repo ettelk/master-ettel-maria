@@ -6,3 +6,4 @@ $plantillas = __DIR__ .'/plantillas/';
 }
 add_shortcode('lastest_posts', 'trespost');*/
 ?> 
+   
