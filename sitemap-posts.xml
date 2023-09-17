@@ -1,16 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.sitemaps.org/schemas/sitemap-image/0.9">
   <url>
     <loc>https://master-ettel-maria.test/casos-de-exito/</loc>
     <lastmod>2023-09-15</lastmod>
   </url>
   <url>
     <loc>https://master-ettel-maria.test/marketing-y-data/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-17</lastmod>
   </url>
   <url>
     <loc>https://master-ettel-maria.test/google-performance-max/</loc>
-    <lastmod>2023-09-14</lastmod>
+    <lastmod>2023-09-17</lastmod>
+    <image:image>
+      <image:loc>https://master-ettel-maria.test/wp-content/uploads/2023/04/seo-image-default-300x300.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://master-ettel-maria.test/the-second-one/</loc>
+    <lastmod>2023-09-17</lastmod>
+    <image:image>
+      <image:loc>https://master-ettel-maria.test/wp-content/uploads/2023/03/gettyimages-1252207584-300x200.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://master-ettel-maria.test/pricing/</loc>

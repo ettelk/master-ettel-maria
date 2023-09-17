@@ -14,6 +14,7 @@ $domblog->preserveWhiteSpace = false;
 $rootblog = $domblog->createElement('urlset');
 $domblog->appendChild($rootblog);
 $rootblog->setAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
+$rootblog->setAttribute('xmlns:image', 'http://www.sitemaps.org/schemas/sitemap-image/0.9');
 //$resultblog->setAttribute('id', 1);
 $argsblog = array(
 'posts_per_page' => -1,
@@ -23,6 +24,8 @@ $argsblog = array(
 'order' => 'DESC',
 'post_status' => 'publish',
 );
+
+// Código de los posts
 $obtencionblog = new WP_Query( $argsblog );
 if ($obtencionblog->have_posts()) :
 while ($obtencionblog->have_posts()) : $obtencionblog->the_post();
@@ -35,6 +38,23 @@ $resultblog = $domblog->createElement('url');
 $rootblog->appendChild($resultblog);
 $resultblog->appendChild($domblog->createElement('loc', $enlace));
 $resultblog->appendChild($domblog->createElement('lastmod', $lastestmod));
+
+// Obtener las imágenes en el contenido de the_content()
+$content = get_the_content();
+$pattern = '/<img[^>]+src=[\'"]([^\'"]+)[\'"][^>]*>/';
+preg_match_all($pattern, $content, $matches);
+
+// Agregar las URL de las imágenes al elemento <url>
+if (!empty($matches[1])) {
+foreach ($matches[1] as $image_url) {
+$image_element = $domblog->createElement('image:image');
+$resultblog->appendChild($image_element);
+
+$loc_element = $domblog->createElement('image:loc', $image_url);
+$image_element->appendChild($loc_element);
+}
+}
+
 }
 }
 endwhile;
